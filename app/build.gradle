@@ -1,11 +1,17 @@
-apply plugin: 'com.android.application'
+//apply plugin: 'com.android.application'
+apply plugin: 'android-library'
+
+version  = '0.0.1'
+group    = 'com.kazunokofactory.vem'
+
+
 
 android {
     compileSdkVersion 20
     buildToolsVersion "20.0.0"
 
     defaultConfig {
-        applicationId "trialcalculation.kazunokofactory.com.myapplication"
+        applicationId "com.kazunokofactory.vem"
         minSdkVersion 14
         targetSdkVersion 20
         versionCode 1
@@ -19,6 +25,21 @@ android {
     }
 }
 
+
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
+
+/*android-library
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${your_repository_location}"
+            pom.version = version
+            pom.groupId = group
+            pom.artifactId = 'vem-lib'
+        }
+    }
+}
+*/
